@@ -1,0 +1,21 @@
+[user]
+    name = ""
+    email = ""
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+    decorate = auto
+    interactive = true
+
+[alias]
+    hist = log --oneline --graph --decorate --all
+
+[log]
+    decorate = full
+[core]
+    editor = vi
+[push]
+    default = matching
