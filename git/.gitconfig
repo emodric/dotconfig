@@ -15,7 +15,9 @@
 
 [log]
     decorate = full
+
 [core]
     editor = vi
+
 [push]
     default = matching
