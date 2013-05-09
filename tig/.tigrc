@@ -1,4 +1,4 @@
-color cursor red default underline
+color cursor default black
 set line-graphics = utf-8
 set show-author = full
 set author-width = 25
