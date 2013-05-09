@@ -1,0 +1,9 @@
+color cursor red default underline
+set line-graphics = utf-8
+set show-author = full
+set author-width = 25
+set show-id = yes
+set id-width = 7
+set tab-size = 4
+set ignore-case = yes
+set show-date = local
