@@ -22,6 +22,10 @@ set pastetoggle=<F2>    " F2 for paste/nopaste toggle
 autocmd InsertLeave * set nocursorline
 autocmd InsertEnter * set cursorline
 
+" Highlight the cursor line
+:hi CursorLine   cterm=NONE ctermbg=black ctermfg=white guibg=black guifg=white
+:hi CursorColumn cterm=NONE ctermbg=black ctermfg=white guibg=black guifg=white
+
 " Highlighting for various file types
 au BufRead,BufNewFile *.twig set filetype=jinja
 au BufRead,BufNewFile *.twig set filetype=htmljinja
