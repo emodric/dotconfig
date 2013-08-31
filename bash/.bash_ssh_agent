@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Do not start an SSH agent if the user has a forwarded agent.
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    # Check if a local SSH agent is already running. If not, start one.
+    export SSH_AUTH_SOCK="$HOME/.ssh/ssh-agent.socket"
+    if [ ! -S "$SSH_AUTH_SOCK" ]; then
+        eval `ssh-agent -a "$SSH_AUTH_SOCK"`
+    fi
+fi
