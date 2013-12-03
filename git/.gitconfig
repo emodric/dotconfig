@@ -1,6 +1,5 @@
-[user]
-    name = "Edi Modrić"
-    email = ""
+[include]
+    path = .gitconfig_user
 
 [color]
     diff = auto
