@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+if [ -f ~/.bashrc_start ]; then
+    . ~/.bashrc_start
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -147,4 +151,8 @@ fi
 
 if [ -f ~/.bash_ssh_agent ]; then
     . ~/.bash_ssh_agent
+fi
+
+if [ -f ~/.bashrc_end ]; then
+    . ~/.bashrc_end
 fi
