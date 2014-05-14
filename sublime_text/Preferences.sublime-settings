@@ -25,5 +25,6 @@
     "tab_completion": false,
     "update_check": false,
     "word_wrap": false,
-    "wrap_width": 100
+    "wrap_width": 100,
+    "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?_"
 }
