@@ -93,3 +93,6 @@ alias sf='php app/console'
 alias open='xdg-open'
 
 export LESS="-RFX"
+
+eval `dircolors -b`
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
