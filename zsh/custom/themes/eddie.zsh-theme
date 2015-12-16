@@ -15,5 +15,3 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}( ± "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[blue]%} ) %{$reset_color%}"
 
 PROMPT=$'%{$fg_bold[blue]%}%n%{$reset_color%}%{$fg_bold[white]%}@%{$reset_color%}%{$fg_bold[green]%}%m %{$reset_color%}%{$fg_bold[yellow]%}[%~]%{$reset_color%} $(git_prompt_info)%{$fg_bold[white]%}\$%{$reset_color%} '
-
-RPROMPT='%{$fg[yellow]%}⚡%{$reset_color%} $(battery_pct_prompt)%{$fg_bold[magenta]%} 🕓 %D{[%H:%M:%S]} %{$reset_color%}'
