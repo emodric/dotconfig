@@ -94,5 +94,7 @@ alias open='xdg-open'
 
 export LESS="-RFX"
 
+export COMPOSER_DISABLE_XDEBUG_WARN=1
+
 eval `dircolors -b`
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
