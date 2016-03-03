@@ -1,9 +1,15 @@
-# get the name of the branch we are on
+# get the name of the branch & tag we are on
 function git_prompt_info() {
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
     ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+
+    tag=$(git describe --exact-match --tags $ref 2> /dev/null)
+    if [[ -n $tag ]]; then
+        tag=" $tag";
+    fi
+
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}%{$fg_bold[yellow]%}$tag%{$reset_color%}$(git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
