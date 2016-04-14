@@ -96,5 +96,7 @@ export LESS="-RFX"
 
 export COMPOSER_DISABLE_XDEBUG_WARN=1
 
+export GPG_TTY=`tty`
+
 eval `dircolors -b`
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
