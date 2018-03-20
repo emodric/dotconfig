@@ -83,18 +83,19 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias mysql='mysql -u root'
-alias mysqldump='mysqldump -u root'
+alias mysql='mysql -u admin'
+alias mysqldump='mysqldump -u admin'
 alias phpunit='phpunit --colors'
 alias diff='colordiff'
 alias less='(less -R)'
-alias ezp='php ezpublish/console'
-alias sf='php app/console'
 alias open='xdg-open'
+
+alias php-profiler='XDEBUG_CONFIG=\"profiler_enable=1\" /usr/bin/php -dzend_extension=xdebug.so'
+alias php-valgrind='sudo valgrind --tool=callgrind --dump-instr=yes --trace-jump=yes -v /usr/bin/php'
 
 export LESS="-RFX"
 
-export COMPOSER_DISABLE_XDEBUG_WARN=1
+# export COMPOSER_DISABLE_XDEBUG_WARN=1
 
 export GPG_TTY=`tty`
 
