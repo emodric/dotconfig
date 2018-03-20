@@ -1,6 +1,9 @@
 [include]
     path = .gitconfig_user
 
+[user]
+    useConfigOnly = true
+
 [color]
     diff = auto
     status = auto
@@ -20,3 +23,11 @@
 
 [push]
     default = simple
+
+[diff]
+    compactionHeuristic = true
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
