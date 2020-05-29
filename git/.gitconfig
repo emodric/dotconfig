@@ -26,6 +26,7 @@
 
 [diff]
     compactionHeuristic = true
+    noprefix = true
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
@@ -34,3 +35,6 @@
 
 [rebase]
     instructionFormat=%s (%an <%ae>)
+
+[tag]
+    sort = version:refname
