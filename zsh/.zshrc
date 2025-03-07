@@ -49,11 +49,13 @@ ZSH_CUSTOM=~/dotconfig/zsh/custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras command-not-found common-aliases dirhistory vagrant battery)
+
+# NOTE: zsh-syntax-highlighting plugin must be located at the end
+plugins=(git git-extras command-not-found common-aliases dirhistory vagrant battery zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/home/eddie/bin:/home/eddie/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -85,6 +87,7 @@ export LANG=en_US.UTF-8
 
 alias mysql='mysql -u admin'
 alias mysqldump='mysqldump -u admin'
+alias mycli='mycli -u admin'
 alias phpunit='phpunit --colors'
 alias diff='colordiff'
 alias less='(less -R)'
