@@ -15,14 +15,24 @@
 [alias]
     hist = log --oneline --graph --decorate --all
 
+[init]
+    defaultBranch = master
+
 [log]
     decorate = full
 
 [core]
     editor = vi
 
+[pull]
+    rebase = false
+    ff = only
+
 [push]
     default = simple
+
+[rerere]
+    enabled = true
 
 [diff]
     compactionHeuristic = true
@@ -38,3 +48,12 @@
 
 [tag]
     sort = version:refname
+
+[init]
+    defaultBranch = master
+
+[pager]
+    branch = false
+    log  = less -F
+    diff = less -F
+    show = less -F
